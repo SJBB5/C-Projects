@@ -1,0 +1,44 @@
+TITLE: Sam Brown, CSCI200 9AM, Smart, food-reducing Fridge
+PROBLEM DESCRIPTION: Problem Description
+Food waste is one of the largest problems in modern society today. Every year billions of dollars worth of food is thrown away. 
+The excessive food waste in our society not only hurts the businesses that attempt to sell it but also contributes to the problem of food security in the US today. 
+Expiration dates are majorly to blame. My program will work to provide an algorithm for grocery stores and fridges that takes in the store's inventory and expiration dates and actively adjusts the prices to provide effective incentives to customers as time passes. 
+The program can also produce data and graphics that can provide insight into the behavior of consumers and how they might react to such a technology. 
+Finally, the program will be able to provide store managers with insight on stocking levels. The main feature will be the price-adjusting and determining an effective algorithm for that, and the other features can be added on if necessary for project.
+PROGRAM DOCUMENTATION:
+To run and test:
+Type make in the terminal and then ./Final. Once the program is running, it will prompt you to be a customer or an employee.
+Select employee (2) first. Now it will prompt you to either remove or add items to stock, select input items to stock. Now it will ask
+for a method, choose input via file. The name of the file we will use is fileInput.txt. Now it will prompt to return home, type in C.
+Now, select the customer option and then find item pricing. For the name you can answer any of the following and see how the discounts differ:
+Oranges, Potatoes, and Mac. Each of these are of different type (Boxed, canned, produce) so they will have different discount calculations.
+You are also able to enter items individually, and if you have time you can navigate to that and follow the prompts. The file input is more efficient.
+Extra info:
+Extra features that could be added to the program include: a way to modify the steepness or slope used in the discount calculations, an interactive interface
+used to navigate options instead of the terminal, and an option to create a formatted stock report and even analysis of sales all outputted to a file. One could also expand it and create a store class that stores instances of fridges.
+My original proposal did not organize the goods into different categories (Produce etc.) and have different pricing functions for each one. 
+My professor suggested this to achieve the complexity needed for the final project so that is what I did. Otherwise my program resembles my proposal.
+
+CLASS DESCRIPTION:
+I created two classes: Fridge, Product.
+The product class encapsulates information such as quantity, type, price, and days till expiration. It also includes the function that calculates the price of the given good.
+The Fridge class contains a list of instances of the product class. It also handles the inputting, outputting and finding of products to said fridge.
+Creating these two classes made my program much more structured and easier to tackle piece by piece.
+NOTE!: It may seem that the product class is mostly just setters and getters, but alot of the complexity in the program is in the getPrice() function. That is where I put the pricing calculations
+
+LIST DATA STRUCTURE:
+The private data of the Fridge class includes a vector of instance of the Product class named _itemList. I chose a vector because the list will have to be added to and subtracted from.
+Using an array would not make sense in this situation. Using a vector worked well as it successfully organized and stored all the data that the fridge encapsulated.
+
+FILE I/O:
+To input products to the fridge one has the (recommended) option to submit a file. The file is then opened and read and all the data of each prodct is added to the list for the fridge.
+File input was necessary because in reality no store is going to be manually entering new stock into their system.
+
+REFLECTIONS:
+I learned alot from developing this project. It helped me understand why some grocery stores organize things in the way they do. 
+I enjoyed being able to have two classes and have them relate to eachother. It made alot of sense logically and within the program. I also solidified my ability to work with classes and OOP.
+I also enjoyed writing the code for the pricing functions. I was able to use functions that I have been learning about for a real world application.
+When I was creating the branching logic for the user interface it was a little difficult to keep track of all of the different branches.
+If I had to do another project I think that I would try and create a program that organizes stocks and calculates important metrics for them.
+
+Thank you to the TA that grades this! Have a great summer!
